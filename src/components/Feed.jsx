@@ -63,6 +63,7 @@ const Feed = () => {
               <ShareIcon />
             </IconButton>
             <Checkbox
+            color="success"
               {...label}
               icon={<BookmarkBorderIcon />}
               checkedIcon={<BookmarkIcon />}
