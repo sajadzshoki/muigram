@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import RightBar from "./components/RightBar";
 import SideBar from "./components/SideBar";
-import Feed from "./components/Feed";
+import Posts from "./components/Posts";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <Stack direction="row" spacing={2} justifyContent="space-between">
         <SideBar />
-        <Feed />
+        <Posts />
         <RightBar />
       </Stack>
     </React.Fragment>

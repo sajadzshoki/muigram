@@ -81,7 +81,7 @@ function Navbar() {
           <Avatar
             onClick={handleClick}
             alt="Remy Sharp"
-            src="http://mui.com/static/images/avatar/3.jpg"
+            src="http://mui.com/static/images/avatar/1.jpg"
             sx={{ width: 45, height: 45, cursor: "pointer" ,marginLeft: 1 }}
           />
           <Menu

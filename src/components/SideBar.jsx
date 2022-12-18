@@ -19,7 +19,7 @@ const ListItemButtons = styled(ListItemButton)({
 })
 const SideBar = () => {
   return (
-    <Box  flex={1} sx={{ display: { sm: "none", md: "block" } }}>
+    <Box  flex={1} sx={{ display: { xs: "none", md: "block" } }}>
       <Box position="fixed" >
 
         <List >
