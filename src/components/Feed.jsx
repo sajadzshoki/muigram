@@ -22,11 +22,11 @@ const label = { inputProps: { "aria-label": "Checkbox demo" } };
 const Feed = () => {
   return (
     <Box flex={4}>
-      <Card sx={{ maxWidth: "90%", m: "2rem auto" }}>
+      <Card sx={{ maxWidth: "90%", m: "2rem auto"  ,borderRadius:"10px" }}>
         <CardHeader
           avatar={
             <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-              R
+              S
             </Avatar>
           }
           action={

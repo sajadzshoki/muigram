@@ -12,15 +12,16 @@ import GroupIcon from '@mui/icons-material/Group';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import DarkModeBtn from "./DarkModeBtn";
 // import SettingsBrightnessIcon from '@mui/icons-material/SettingsBrightness';
 
 const ListItemButtons = styled(ListItemButton)({
   borderRadius:"0px 15px 15px 0px"
 })
-const SideBar = () => {
+const SideBar = (mode ,setMode) => {
   return (
     <Box  flex={1} sx={{ display: { xs: "none", md: "block" } }}>
-      <Box position="fixed" >
+      <Box position="fixed"  >
 
         <List >
           <ListItem disablePadding >
@@ -76,7 +77,17 @@ const SideBar = () => {
               <ListItemText primary="Profile" />
             </ListItemButtons>
           </ListItem>
+
+          <ListItem disablePadding>
+            <ListItemButtons >
+              <ListItemIcon >
+                <DarkModeBtn onClick={(e) => setMode(mode === "light" ? "dark" : "light")}/>
+              </ListItemIcon>
+              <ListItemText primary="Dark Mode" />
+            </ListItemButtons>
+          </ListItem>
          
+        
         </List>
 
       </Box>
