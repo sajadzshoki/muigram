@@ -1,3 +1,12 @@
+<h2>A simple social media app UI , made with ReactJS and Material UI</h2>
+<h3>I just made this app to test MUI and geting use to it .</h3>
+
+live demo :
+https://socialmedia-react-materialui.netlify.app/
+
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
