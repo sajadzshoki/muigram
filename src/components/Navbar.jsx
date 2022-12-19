@@ -3,9 +3,10 @@ import React from "react";
 import BoltIcon from "@mui/icons-material/Bolt";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MailIcon from "@mui/icons-material/Mail";
-import SearchIcon from '@mui/icons-material/Search';
+import SearchIcon from "@mui/icons-material/Search";
+import MenuIcon from "@mui/icons-material/Menu";
 import { Logout, PersonAdd, Settings } from "@mui/icons-material";
-/* ------------------------------------ . ----------------------------------- */
+/* ------------------------------------.----------------------------------- */
 
 import {
   AppBar,
@@ -21,22 +22,15 @@ import {
   MenuItem,
   Divider,
   ListItemIcon,
+  Paper,
+  IconButton,
 } from "@mui/material";
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
   justifyContent: "space-between",
 });
-const Search = styled("div")({
-  backgroundColor: "white",
-  padding: "0 10px",
-  borderRadius: "20px",
-  width: "40%",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  
-});
+
 const Icons = styled(Box)({
   display: "flex",
   alignItems: "center",
@@ -52,9 +46,8 @@ function Navbar() {
     setAnchorEl(null);
   };
   return (
-    <AppBar position="sticky" >
-      
-      <StyledToolbar >
+    <AppBar position="sticky">
+      <StyledToolbar>
         <Stack direction="row" alignItems="center">
           <BoltIcon fontSize="large" />
           <Typography
@@ -65,12 +58,31 @@ function Navbar() {
             Sajad Insta
           </Typography>
         </Stack>
-
-        <Search>
-          <InputBase placeholder="search..." />
-          <SearchIcon color="primary" sx={{cursor:"pointer"}}/>
-        </Search>
-
+        {/* searchbar */}
+        <Paper
+          component="form"
+          sx={{
+            p: "2px 4px",
+            display: "flex",
+            alignItems: "center",
+            width: "40%",
+            borderRadius:"15px"
+          }}
+        >
+          <IconButton sx={{ p: "5px" }} aria-label="menu">
+            <MenuIcon sx={{display:{xs:"none",sm:"block"}}} />
+          </IconButton>
+          <InputBase
+            sx={{ ml: 1, flex: 1 }}
+            placeholder="Search . . . "
+            inputProps={{ "aria-label": "search . . . " }}
+          />
+          <IconButton type="button" aria-label="search">
+            <SearchIcon />
+          </IconButton>
+        
+        </Paper>
+        {/* icons and avatar  */}
         <Icons>
           <Badge badgeContent={4} color="error" sx={{ cursor: "pointer" }}>
             <NotificationsIcon />
@@ -82,7 +94,7 @@ function Navbar() {
             onClick={handleClick}
             alt="Remy Sharp"
             src="http://mui.com/static/images/avatar/1.jpg"
-            sx={{ width: 45, height: 45, cursor: "pointer" ,marginLeft: 1 }}
+            sx={{ width: 45, height: 45, cursor: "pointer", marginLeft: 1 }}
           />
           <Menu
             anchorEl={anchorEl}

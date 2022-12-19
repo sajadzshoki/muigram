@@ -24,7 +24,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 500,
+  width: "40%",
   bgcolor: "background.default",
   color:"text.primary",
   boxShadow: 24,
@@ -39,7 +39,7 @@ const Add = () => {
   return (
     <>
       <Tooltip title="Add post">
-        <IconButton sx={{ position: "fixed", bottom: "1rem", left: "1rem" }}>
+        <IconButton  sx={{ position: "fixed", bottom: "1rem",zIndex:2000 ,left:{xs:"calc(44%)",md:"1rem"} } }>
           <Fab color="primary" aria-label="add" onClick={handleOpen}>
             <AddIcon />
           </Fab>
@@ -51,6 +51,7 @@ const Add = () => {
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+
       >
         <Box sx={style}>
           <Typography
@@ -60,6 +61,7 @@ const Add = () => {
             textAlign="center"
             color="gray"
             marginBottom="2rem"
+            
           >
             Create a post
           </Typography>
@@ -77,7 +79,7 @@ const Add = () => {
               "& > :not(style)": {
                 textAlign: "center",
                 width: "100%",
-                margin: "1rem 0rem 1rem 0.6rem",
+                margin: "1rem 0rem 1rem 0.2rem",
               },
             }}
             noValidate

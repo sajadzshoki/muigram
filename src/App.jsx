@@ -5,10 +5,10 @@ import RightBar from "./components/RightBar";
 import SideBar from "./components/SideBar";
 import Posts from "./components/Posts";
 import Add from "./components/Add";
-
+import BottomAppBar from "./components/BottomAppBar";
 
 function App() {
-  const [mode, setMode] = React.useState("light");
+  const [mode, setMode] = React.useState("dark");
 
   const darkTheme = createTheme({
     palette: {
@@ -19,12 +19,14 @@ function App() {
     <ThemeProvider theme={darkTheme}>
       <Box bgcolor={"background.default"} color={"text.primary"}>
         <Navbar />
+
         <Stack direction="row" spacing={2} justifyContent="space-between">
-          <SideBar setMode={setMode} mode={mode}/>
+          <SideBar setMode={setMode} mode={mode} />
           <Posts />
           <RightBar />
         </Stack>
         <Add />
+        <BottomAppBar setMode={setMode} mode={mode} />
       </Box>
     </ThemeProvider>
   );

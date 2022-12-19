@@ -18,7 +18,7 @@ import DarkModeBtn from "./DarkModeBtn";
 const ListItemButtons = styled(ListItemButton)({
   borderRadius:"0px 15px 15px 0px"
 })
-const SideBar = (mode ,setMode) => {
+const SideBar = ({mode ,setMode}) => {
   return (
     <Box  flex={1} sx={{ display: { xs: "none", md: "block" } }}>
       <Box position="fixed"  >
@@ -80,8 +80,8 @@ const SideBar = (mode ,setMode) => {
 
           <ListItem disablePadding>
             <ListItemButtons >
-              <ListItemIcon >
-                <DarkModeBtn onClick={(e) => setMode(mode === "light" ? "dark" : "light")}/>
+              <ListItemIcon onChange={(e) => setMode(mode === "light" ? "dark" : "light")}>
+                <DarkModeBtn />
               </ListItemIcon>
               <ListItemText primary="Dark Mode" />
             </ListItemButtons>

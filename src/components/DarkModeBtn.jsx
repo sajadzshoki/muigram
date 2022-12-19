@@ -51,19 +51,12 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-export default function DarkModeBtn(mode, setMode) {
+export default function DarkModeBtn() {
   return (
     <FormGroup>
       <FormControlLabel
-        control={
-          <MaterialUISwitch
-            sx={{ m: 1 }}
-            defaultChecked
-            
-          />
-        }
+        control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
         label=""
-        onChange={(e) => setMode(mode === "light" ? "dark" : "light")}
       />
     </FormGroup>
   );

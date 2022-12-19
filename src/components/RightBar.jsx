@@ -101,12 +101,12 @@ const RightBar = () => {
         {/* chats */}
         <Typography
           fontWeight={100}
-          sx={{ fontSize: "1.2rem", margin: "1rem 0rem" }}
+          sx={{ fontSize: "1.2rem", marginTop:"1rem" }}
         >
-          Latest Chats
+          Recent Chats
         </Typography>
         <List 
-          sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper",overflowY:"scroll",height:"220px"}}
+          sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper"}}
           
         >
           <ListItem alignItems="flex-start">
